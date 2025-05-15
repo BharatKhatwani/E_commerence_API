@@ -1,0 +1,28 @@
+# Node.js dependencies
+/node_modules/
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Build directories (if you have any build steps)
+build/
+dist/
+
+# npm package lock file (optional, for version control of dependencies)
+package-lock.json
+
+# Optional: You can choose to ignore .env files to keep sensitive data safe
+# .env
