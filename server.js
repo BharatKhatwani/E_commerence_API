@@ -7,6 +7,7 @@ app.use(express.json());
 const UserRouter = require('./routes/User_router.js');
 const PostRouter = require('./routes/ProductRoute.js');
 const MongoURI = process.env.MongoURI;
+const CartRouter = require('./routes/CartRoute.js')
 
 mongoose.connect(MongoURI).then(() => {
     console.log('Connected to MongoDB');
@@ -19,7 +20,7 @@ app.get("/", (req, res) =>{
 })
 app.use('/user', UserRouter);
 app.use('/api', PostRouter)
-
+app.use('/cart', CartRouter)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
